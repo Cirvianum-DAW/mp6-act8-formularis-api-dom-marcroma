@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/src/exercici/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register to access weather info</h1>
+        <form id="registerForm" novalidate>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" required>
+
+            <!-- L'adreça de correu electrònic ha de tenir un format vàlid. Utilitzeu l'expressió regular proporcionada a continuació per validar l'adreça de correu electrònic: -->
+            <!-- const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; -->
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="dni">DNI</label>
+            <input type="text" name="dni" id="dni" required>
+
+            <label for="birthdate">Birthdate</label>
+            <input type="date" name="birthdate" id="birthdate">
+
+            <label for="gender">Gender</label>
+            <select name="genderSelect" id="genderSelect">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">Non-binary</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- La contrasenya ha de tenir com a mínim 6 caràcters. Heu de mostrar un missatge d'alerta si la contrasenya és massa curta. -->
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required minlength="6">
+
+            <h4>Accept Terms & Conditions</h4>
+            <input type="checkbox" name="terms" id="terms" required>
+
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
